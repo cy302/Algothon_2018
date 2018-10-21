@@ -1,6 +1,6 @@
 {
 	"data":{
-		"filename":  "some_random_filepath",    // fill the file name (path)
+		"filename":  "some_random_filepath",
 		"sequence_length": 50, 
 		"training_rate": 0.9,
 		"normalise": true
