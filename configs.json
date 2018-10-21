@@ -1,0 +1,49 @@
+{
+	"data":{
+		"filename":  "some_random_filepath",    // fill the file name (path)
+		"sequence_length": 50, 
+		"training_rate": 0.9,
+		"normalise": true
+	},
+	"training": {
+		"epochs": 40,
+		"batch_szie": 50
+	},
+	"model": {
+		"loss": "mse",
+		"optimiser": "adam",
+		"sav_dir": "some_random_dir_to_save_model",
+		"layers":[
+				{
+					"type":"lstm",
+					"neurons":128,
+					"input_timesteps": 63,
+					"input_dim": 2,
+					"return_seq": true
+				},
+				{
+					"type": "dropout",
+					"rate": 0.2
+				},
+				{
+					"type": "lstm",
+					"neurons": 128,
+					"return_seq": true
+				},
+				{
+					"type": "lstm",
+					"neurons": 64,
+					"return_seq": false
+				},
+				{
+					"type": "dropout", 
+					"rate": 0.2
+				},
+				{
+					"type": "dense",
+					"neurons": 1,
+					"activation": "linear"
+				}
+			]
+	}
+}
