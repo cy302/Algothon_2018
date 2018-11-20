@@ -1,2 +1,2 @@
 # Algothon_2018
-NLP approach to stock price prediction
+Hybrid RNN and time series predictions regression for stock price prediction
